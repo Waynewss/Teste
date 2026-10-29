@@ -1,0 +1,39 @@
+WMCELL DIRECT — APLICATIVO ANDROID
+==================================
+Este é um PROJETO ANDROID STUDIO, não um APK já compilado.
+
+O QUE FUNCIONA
+- Visual preto/vermelho e logo oficial WM CELL no aplicativo e ícone.
+- Links para WhatsApp comum e WhatsApp Business, escolhendo app pelo pacote Android.
+- QR Code criado offline no próprio celular, sem serviços externos.
+- Histórico dos 10 últimos contatos (salvo dentro do aplicativo).
+- Copiar link e número pela área de transferência Android.
+- Não precisa de site publicado e NÃO pede permissão para ler seus contatos.
+- A mensagem é só preenchida no WhatsApp; o usuário confirma o envio.
+
+PARA GERAR UM APK COM ANDROID STUDIO NO COMPUTADOR
+1. Extraia este ZIP.
+2. Abra o Android Studio e selecione "Open" / "Abrir".
+3. Selecione a pasta WMCELL_DIRECT_Android_Studio, que contém settings.gradle.
+4. Configure SDK Android 35 e Gradle 8.9, se o Android Studio solicitar.
+5. Aguarde o Sync, que baixa as dependências (é necessária internet).
+6. No menu Build, escolha Build Bundle(s) / APK(s) > Build APK(s).
+7. Pegue app/build/outputs/apk/debug/app-debug.apk.
+8. Copie o APK para o celular e instale, autorizando a instalação desta fonte.
+
+ALTERNATIVA PARA GERAR O APK SEM INSTALAR ANDROID STUDIO
+- Envie o conteúdo da pasta para um repositório GitHub de sua titularidade.
+- Na aba Actions, rode o workflow "Compilar WMCELL DIRECT APK".
+- Após concluir, baixe o artifact WMCELL_DIRECT_APK e extraia o APK.
+- Este fluxo requer uma conta no GitHub e acesso à internet.
+
+NOTAS IMPORTANTES
+- APK debug serve para teste/instalação pessoal. Para distribuir/publicar, gerar APK
+  de release assinado com chave privada própria (Build > Generate Signed Bundle/APK).
+- Esta versão foi preparada e revisada estaticamente; o APK não pôde ser
+  compilado nem testado em um telefone neste ambiente.
+- Se nenhum WhatsApp da variante escolhida estiver instalado, o link universal
+  é aberto como alternativa; não há garantia de selecionar automaticamente Business.
+- O QR Code inclui número e mensagem no link que é lido por quem o escaneia;
+  gerá-lo não envia dados para serviços de terceiros.
+- A biblioteca de QR Code inclui o código MIT de Kazuhiko Arase (2009).
